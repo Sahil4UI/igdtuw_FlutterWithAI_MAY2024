@@ -34,7 +34,7 @@ void main()
   // print("the sum of $x and $y is ${x+y}");
 
   // label
-  OUTER:
+  // OUTER:
   // for (int i=1;i<=10;i++)
   // {
     //  print(i);
@@ -51,13 +51,40 @@ void main()
   //   }
   // }
   
-  for (int i=1;i<=10;i++)
-  {
-    if(i%3==0)
+  // for (int i=1;i<=10;i++)
+  // {
+  //   if(i%3==0)
+  //   {
+  //     continue;
+  //   }
+  //   print(i);
+  // }
+
+// Generic List
+  // List<String?> x = ["hey","hi","hello","bye",null];
+
+// for In Loop
+// var  - dynamic
+  // for (var i in x)
+  // {
+  //    print(i);
+  // }
+    // List x = [1,2,3,4,5,6,7,8,9,10];
+  // for Each Loop
+    // x.forEach((element) { print(element); });
+
+    // int x = 1;
+    // while (x<=5)
+    // {
+    //   print(x);
+    //   x++;
+    // }
+
+  int x = 1;
+    do
     {
-      continue;
-    }
-    print(i);
-  }
+      print(x);
+      x++;
+    }while (x<=5);
 
 }

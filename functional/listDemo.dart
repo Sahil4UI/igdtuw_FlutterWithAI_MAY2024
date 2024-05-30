@@ -1,11 +1,11 @@
 void main()
 {
-   List<int> x = [1,2,3,54];
-   x.add(90);
-   x.addAll([-20,3,-30,90,3]);
-    x.add(-1000);
-    x.insert(0,10000);
-    x.insertAll(0,[0,-2,-3]);
+  //  List<int> x = [1,2,3,54];
+  //  x.add(90);
+  //  x.addAll([-20,3,-30,90,3]);
+  //   x.add(-1000);
+  //   x.insert(0,10000);
+  //   x.insertAll(0,[0,-2,-3]);
   //  remove by value
   //  x.remove(54);
   // x.removeAt(0);
@@ -22,13 +22,18 @@ void main()
   // x.clear();
 
 // update
-  x[0] = 50;
-  print(x);
-  print("Reverse : ${x.reversed}");
+  // x[0] = 50;
+  // print(x);
+  // print("Reverse : ${x.reversed}");
   // x.sort();
   // print("Asc : $x");
-  x.sort((first,second)=>second-first);
-  print("Desc : $x");
-
-   
+  // x.sort((first,second)=>second-first);
+  // print("Desc : $x");
+  // List<String> a = ["dart","is","build","by","google"];
+  // print(a);
+  // a.sort((String l , String m) => l.compareTo(m));
+  // print("Asc : $a");
+  // a.sort((String l , String m) => m.compareTo(l));
+  // print("Desc : "+a.toString());
+    
 }

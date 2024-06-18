@@ -1,4 +1,5 @@
-import 'package:quiz_app_01/model/question.dart';
+
+import '../model/question.dart';
 
 List quesAns = [
   Question(

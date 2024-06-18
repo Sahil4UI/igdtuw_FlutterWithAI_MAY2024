@@ -1,16 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app_01/data/ques_ans.dart';
+
+import 'data/ques_ans.dart';
 
 class QuizNotifer extends ChangeNotifier{
   int currentQuesIndex = 0;
 
-  List _userAnswer =[] ;
-  
+  List userAnswer =[] ;
+  int correctCount = 0;
   ChangeQA(String ans)
   {
-     _userAnswer.add([quesAns[currentQuesIndex].question,ans]);
+     userAnswer.add([quesAns[currentQuesIndex].question,ans]);
      currentQuesIndex++;
-     print(_userAnswer);
+     print(userAnswer);
      notifyListeners();
+  }
+
+  totalCorrect(){
+    print(userAnswer);
+    for (int i=0;i<userAnswer.length;i++)
+    {
+        if (userAnswer[i][1]==quesAns[i].answer[0])
+        {
+          print(":hey");
+            correctCount++;
+        }
+    }
+            notifyListeners();
+            return correctCount;
+
   }
 }

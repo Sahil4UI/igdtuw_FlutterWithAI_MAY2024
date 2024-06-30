@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/services/chatgpt_service.dart';
+import 'package:flutter_application_1/services.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -10,7 +10,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  final chatgptservice = ChatgptService();
+  final chatgptservice = Services();
   Map? matchDetails;
   var loading= false;
 
@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
    });
 
    try{
-      final details = await chatgptservice.getResponse("29d91883-fb69-4d90-8a0e-9c83f73828c8");
+      final details = await chatgptservice.getID("Dhoni");
       setState(() {
         matchDetails = details;
       });
@@ -57,15 +57,18 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              
               Text(
-                "Match : ${matchDetails!["data"]["name"]}"
+                "Player's Name : ${matchDetails!["data"]["name"]}"
               ),
-                            Text(
-                "Match : ${matchDetails!["data"]["matchType"]}",
-              ),
+                
                Text(
-                "Match : ${matchDetails!["data"]["date"]}",
-              )
+                "DOB: ${matchDetails!["data"]["dateOfBirth"]}",
+              ),
+                          Text(
+                "Country ${matchDetails!["data"]["country"]}",
+              ),
+                        Image.network(matchDetails!["data"]["playerImg"])
             ],
           ),
         ),)
